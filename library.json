@@ -1,0 +1,41 @@
+{
+    "name": "pico-ble-notify",
+    "version": "1.0.0",
+    "description": "A library that adds BLE notification support to Raspberry Pi Pico using BTstack",
+    "keywords": "bluetooth, ble, notification, pico, rp2040, btstack",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/IoT-gamer/pico-ble-notify.git"
+    },
+    "authors": [
+      {
+        "name": "Sean P. Leary",
+        "email": "sunrecorder1@gmail.com",
+        "maintainer": true
+      }
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/IoT-gamer/pico-ble-notify",
+    "dependencies": {
+      "earlephilhower/arduino-pico": ">=4.4.4"
+    },
+    "frameworks": "arduino",
+    "platforms": "raspberrypi",
+    "export": {
+      "exclude": [
+        "examples/TemperatureSensor/.pio",
+        "examples/TemperatureSensor/.vscode/.browse.c_cpp.db*",
+        "examples/TemperatureSensor/.vscode/c_cpp_properties.json",
+        "examples/TemperatureSensor/.vscode/launch.json",
+        "examples/TemperatureSensor/.vscode/ipch",
+        "examples/TemperatureSensor/logs/",
+        ".git",
+        ".github",
+        "*.sh",
+        "*.yml",
+        "*.tar.gz"
+      ]
+    }
+
+
+  }
