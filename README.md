@@ -1,5 +1,5 @@
 # BLENotify Library for Raspberry Pi Pico
-A library that adds BLE notification support to the standard BTstackLib for Raspberry Pi Pico.
+A library that adds BLE notification support to the standard BTstackLib in Arduino-Pico for Raspberry Pi Pico.
 
 ## Overview
 [The standard BTstackLib for Arduino-Pico doesn't provide an easy way to send BLE notifications](https://github.com/bluekitchen/btstack/issues/551#issuecomment-1827805004). This library fills that gap by providing a simple wrapper around the lower-level BTstack API for notifications.
@@ -11,14 +11,19 @@ A library that adds BLE notification support to the standard BTstackLib for Rasp
 - Simple integration with existing BTstackLib code
 
 ## PlatformIO Installation
-- Open the PlatformIO project configuration file (`platformio.ini`) and add the following line to the `lib_deps` section:
+- Open the PlatformIO project configuration file (`platformio.ini`) and add the following:
 ```ini
-lib_deps = https://github.com/IoT-gamer/pico-ble-notify
-
-; Uncomment this once the library is published to use the registry
-; lib_deps =
-;     pico-ble-notify
-    ...
+[env:rpipicow]
+platform = https://github.com/maxgerhardt/platform-raspberrypi.git
+board = rpipicow
+framework = arduino
+board_build.core = earlephilhower
+board_build.filesystem_size = 0.5m
+build_flags = 
+    -DPIO_FRAMEWORK_ARDUINO_ENABLE_BLUETOOTH
+    -DPIO_FRAMEWORK_ARDUINO_ENABLE_IPV4
+lib_deps =
+    pico-ble-notify
 ```
 
 ## Arduino IDE Installation
@@ -106,7 +111,7 @@ An example sketch demonstrating how to use the library to send temperature notif
 This library is licensed under the MIT license. See the LICENSE file for more details.
 
 ## Acknowledgements/Credits
-- This library was inspired by the need for a simpler way to implement BLE notifications on the Raspberry Pi Pico platform.
+- This library was inspired by the need for a simpler way to implement BLE notifications on the Raspberry Pi Pico platform with Arduino-Pico core.
 - [@mringwal](https://github.com/mringwal) [work-around suggestion](https://github.com/bluekitchen/btstack/issues/551#issuecomment-1827805004)
 - [@mglazzari-qinmotion](https://github.com/mglazzari-qinmotion) [code snippet and suggestion](https://github.com/bluekitchen/btstack/issues/551#issuecomment-2257178367)
 - [Arduino-Pico](https://github.com/earlephilhower/arduino-pico)
