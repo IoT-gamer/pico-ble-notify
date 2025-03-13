@@ -99,8 +99,9 @@ if (BLENotify.isSubscribed(my_char_handle)) {
 }
 ```
 
-## Example
-An example sketch demonstrating how to use the library to send temperature notifications is included. It reads the Pico's internal temperature sensor and sends notifications when the temperature changes.
+## Examples
+- PlatformIO project [TemperatureSensor](/examples/TemperatureSensor/) demonstrating how to use the library to send temperature notifications. It reads the Pico's internal temperature sensor and sends notifications when the temperature changes.
+- PlatformIO project [NotificationQueueTest](/examples/NotificationQueueTest/) demonstrating a stress test of the library. It sends notifications as fast as possible to test the notification queueing mechanism.
 
 ## Limitations
 - Currently supports tracking up to 10 characteristics (configurable in `BLENotify.h`)

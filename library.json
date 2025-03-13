@@ -1,6 +1,6 @@
 {
     "name": "pico-ble-notify",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A library that adds BLE notification support to Raspberry Pi Pico using BTstack",
     "keywords": "bluetooth, ble, notification, pico, rp2040, btstack",
     "repository": {
@@ -29,6 +29,12 @@
         "examples/TemperatureSensor/.vscode/launch.json",
         "examples/TemperatureSensor/.vscode/ipch",
         "examples/TemperatureSensor/logs/",
+        "examples/NotificationQueueTest/.pio",
+        "examples/NotificationQueueTest/.vscode/.browse.c_cpp.db*",
+        "examples/NotificationQueueTest/.vscode/c_cpp_properties.json",
+        "examples/NotificationQueueTest/.vscode/launch.json",
+        "examples/NotificationQueueTest/.vscode/ipch",
+        "examples/NotificationQueueTest/logs/",
         ".git",
         ".github",
         "*.sh",
